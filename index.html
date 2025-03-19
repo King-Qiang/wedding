@@ -28,28 +28,28 @@
         header {
             background-color: rgba(230, 201, 183, 0.8);
             text-align: center;
-            padding: 20px;
+            padding: 15px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
             color: #8b572a;
-            font-size: 48px;
+            font-size: 32px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .couple {
             text-align: center;
-            padding: 40px 0;
+            padding: 30px 0;
             position: relative;
         }
 
         .couple img {
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            margin: 0 20px;
+            margin: 0 15px;
             border: 5px solid #e6c9b7;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
@@ -60,31 +60,30 @@
         }
 
         .couple span {
-            font-size: 36px;
+            font-size: 28px;
             color: #8b572a;
             position: relative;
-            top: -20px;
+            top: -15px;
         }
 
         .couple h2 {
-            font-size: 32px;
+            font-size: 24px;
             color: #8b572a;
-            margin-top: 20px;
+            margin-top: 15px;
         }
 
         .info {
             text-align: center;
-            padding: 20px;
+            padding: 15px;
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
-            margin: 20px auto;
-            width: 80%;
-            max-width: 600px;
+            margin: 15px auto;
+            width: 90%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .info p {
-            font-size: 20px;
+            font-size: 18px;
             line-height: 1.6;
             margin: 10px 0;
         }
@@ -94,13 +93,13 @@
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
             scroll-snap-type: x mandatory;
-            padding: 20px;
-            gap: 20px;
+            padding: 15px;
+            gap: 15px;
         }
 
         .photo-wall img {
-            min-width: 250px;
-            height: 250px;
+            min-width: 200px;
+            height: 200px;
             object-fit: cover;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -110,6 +109,34 @@
 
         .photo-wall img:hover {
             transform: scale(1.05);
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            .couple img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .couple span {
+                font-size: 24px;
+            }
+
+            .couple h2 {
+                font-size: 20px;
+            }
+
+            .info p {
+                font-size: 16px;
+            }
+
+            .photo-wall img {
+                min-width: 180px;
+                height: 180px;
+            }
         }
     </style>
 </head>
