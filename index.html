@@ -1,92 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wedding Invitation</title>
+    <title>婚礼请柬</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f7f7;
-            color: #333;
-            line-height: 1.6;
+            font-family: 'Dancing Script', cursive;
             margin: 0;
             padding: 0;
+            background: url('https://dummyimage.com/1920x1080/fff0f5/ffffff&text=背景图') center/cover no-repeat fixed;
+            color: #333;
+            animation: fadeIn 1s ease-out;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        header {
+            background-color: rgba(230, 201, 183, 0.8);
             text-align: center;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        .header {
-            margin-bottom: 40px;
-        }
+
         h1 {
-            font-size: 2.5rem;
-            color: #d4a373;
-            margin-bottom: 10px;
+            color: #8b572a;
+            font-size: 48px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
-        h2 {
-            font-size: 1.8rem;
-            font-weight: normal;
-            margin-bottom: 30px;
+
+        .couple {
+            text-align: center;
+            padding: 40px 0;
+            position: relative;
         }
-        .date-location {
-            margin: 40px 0;
+
+        .couple img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 20px;
+            border: 5px solid #e6c9b7;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .couple img:hover {
+            transform: scale(1.1);
+        }
+
+        .couple span {
+            font-size: 36px;
+            color: #8b572a;
+            position: relative;
+            top: -20px;
+        }
+
+        .couple h2 {
+            font-size: 32px;
+            color: #8b572a;
+            margin-top: 20px;
+        }
+
+        .info {
+            text-align: center;
             padding: 20px;
-            background-color: #fefae0;
-            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .rsvp {
-            margin-top: 50px;
+
+        .info p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        .photo-wall {
+            display: flex;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scroll-snap-type: x mandatory;
             padding: 20px;
-            background-color: #e9edc9;
-            border-radius: 8px;
+            gap: 20px;
         }
-        .footer {
-            margin-top: 60px;
-            font-size: 0.9rem;
-            color: #666;
+
+        .photo-wall img {
+            min-width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            scroll-snap-align: start;
         }
-        .hearts {
-            font-size: 2rem;
-            color: #d4a373;
-            margin: 20px 0;
+
+        .photo-wall img:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Wedding Invitation</h1>
-            <div class="hearts">❤ ❤ ❤</div>
-            <h2>We are getting married!</h2>
-        </div>
-        
-        <p>
-            With great joy, we invite you to share in our happiness as we unite in marriage.
-        </p>
-        
-        <div class="date-location">
-            <h3>Date & Time</h3>
-            <p>Thursday, May 1st, 2025</p>
-            
-            <h3>Location</h3>
-            <p>Renshou Gaojiazhuang</p>
-        </div>
-        
-        <div class="rsvp">
-            <h3>RSVP</h3>
-            <p>Please respond by May 15, 2025</p>
-            <p>Email: 1507910412@qq.com</p>
-            <p>Phone: 17396225292</p>
-        </div>
-        
-        <div class="footer">
-            <p>We look forward to celebrating this special day with you!</p>
-            <div class="hearts">❤</div>
-        </div>
+    <header>
+        <h1>诚挚邀请</h1>
+    </header>
+    <div class="couple">
+        <img src="https://dummyimage.com/200x200/ff7f50/ffffff&text=新郎" alt="新郎">
+        <span>&</span>
+        <img src="https://dummyimage.com/200x200/ff69b4/ffffff&text=新娘" alt="新娘">
+        <h2>新郎姓名 & 新娘姓名</h2>
+    </div>
+    <div class="info">
+        <p>良辰已定，吉日待访。</p>
+        <p>吾有薄酒，以谢良友。</p>
+        <p>敬备喜宴，随侯尊驾。</p>
+        <p>时间：2025 年 5 月 1 日 11:00</p>
+        <p>地点：XX 酒店 XX 宴会厅</p>
+    </div>
+    <div class="photo-wall">
+        <img src="image/1.png" alt="照片1">
+        <img src="image/2.png" alt="照片2">
+        <img src="image/3.png" alt="照片3">
+        <img src="image/4.png" alt="照片4">
+        <img src="image/5.png" alt="照片4">
+        <img src="image/6.png" alt="照片4">
     </div>
 </body>
+
 </html>
+    
